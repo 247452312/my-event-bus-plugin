@@ -3,17 +3,15 @@
 
 <idea-plugin>
 
-    <version>0.0.1</version>
-    <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
+    <!-- 插件唯一id. 不要改,改了就变成另一个插件了 -->
     <id>my-evnet-bus</id>
 
-    <!-- Text to display as name on Preferences/Settings | Plugin page -->
+    <!-- 插件页面的名称 | Plugin page -->
     <name>MyEventBus</name>
 
-    <!-- Indicate this plugin can be loaded in all IntelliJ Platform-based products. -->
-    <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.java</depends>
-    <depends>com.intellij.modules.lang</depends>
+    <!--当前版本-->
+    <version>0.0.1</version>
+
 
     <!-- 插件介绍 | Plugin page -->
     <description>
@@ -26,9 +24,14 @@
         <![CDATA[
         <ul>
             <li><b>0.0.1 2022-06-17</b> first commit. Realized basic functions</li>
-            </ul>
+        </ul>
     ]]>
     </change-notes>
+
+    <!-- 加载intellij家的哪些包. -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <codeInsight.lineMarkerProvider id="uhyils.EventBusFindRegisterLineMarkerProvider" language="JAVA" implementationClass="indi.uhyils.gutter.EventBusFindRegisterLineMarkerProvider"/>
