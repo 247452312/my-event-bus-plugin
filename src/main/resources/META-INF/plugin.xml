@@ -3,7 +3,7 @@
 
 <idea-plugin>
 
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
     <id>my-evnet-bus</id>
 
@@ -15,17 +15,17 @@
     <depends>com.intellij.modules.java</depends>
     <depends>com.intellij.modules.lang</depends>
 
-    <!-- Text to display as description on Preferences/Settings | Plugin page -->
+    <!-- 插件介绍 | Plugin page -->
     <description>
         <![CDATA[
-        Adds a <i>Greeting</i> menu group anchored last in the <b>Main Menu</b>
+        这个插件可以配合my-event-bus框架来进行从事件类的new 跳转到监听此事件的位置
     ]]>
     </description>
+    <!--插件更新日志-->
     <change-notes>
         <![CDATA[
         <ul>
-            <li><b>2.0.0</b> Converted to Gradle project.</li>
-            <li><b>1.0</b> Release 2019.1 and earlier.</li>
+            <li><b>0.0.1 2022-06-17</b> first commit. Realized basic functions</li>
             </ul>
     ]]>
     </change-notes>

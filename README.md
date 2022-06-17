@@ -1,33 +1,25 @@
-#  ![](src/main/resources/META-INF/pluginIcon_dark.svg) Gradle Run Gutter Icons
-
-![Build](https://github.com/FirstTimeInForever/gradle-run-gutter-icon/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/16443-gradle-run-gutter-icons.svg)](https://plugins.jetbrains.com/plugin/16443-gradle-run-gutter-icons)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/16443-gradle-run-gutter-icons.svg)](https://plugins.jetbrains.com/plugin/16443-gradle-run-gutter-icons)
+# my event bus plugin
 
 <!-- Plugin description -->
-This simple plugin adds run gutter icons for the `build.gradle.kts` tasks declarations. Then clicked, it executes declared gradle task just like `Execute Gradle Task` action.
+这个插件可以配合my-event-bus框架来进行从事件类的new 跳转到监听此事件的位置
 
-Currently, it only supports these types of task declaration:
-* `tasks.register(<taskName>)`
-* `tasks.create(<taskName>)`
-* `val task = tasks.register(<taskName>)`
-* `val task = tasks.create(<taskName>)`
-* `val task by tasks.registering(<taskName>)`
-* `val task by tasks.creating(<taskName>)`
+例:
 
-[<img width="400" src="https://raw.githubusercontent.com/FirstTimeInForever/gradle-run-gutter-icons/c260b52a0f3d1117c0b80bfc76cb555fcc113158/images/plugin-screenshot.png" alt="Plugin Screenshot"/>](https://raw.githubusercontent.com/FirstTimeInForever/gradle-run-gutter-icons/c260b52a0f3d1117c0b80bfc76cb555fcc113158/images/plugin-screenshot.png)
+* `bus.commit(new LogEvent())`
+
 <!-- Plugin description end -->
 
-## Installation
+## 如何安装
 
-* Using IDE built-in plugin system:
+* 使用idea插件市场:
 
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Gradle Run Gutter Icons</kbd> >
-  <kbd>Install Plugin</kbd>
+暂不支持
 
-* Manually:
+* 手动安装:
 
-  Download the [latest release](https://github.com/FirstTimeInForever/gradle-run-gutter-icons/releases/latest) and install it manually using
+  下载 [latest release](https://github.com/247452312/my-event-bus-plugin/releases/download/v0.0.1/myEventBus-1.5.2.zip)
+  并且在idea下依照以下步骤进行操作:
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
-Gradle Run Gutter Icons plugin is based on the [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template).
+本项目的图标基于alibaba开源图标库:
+ [地址](https://www.iconfont.cn/).
