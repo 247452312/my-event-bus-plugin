@@ -1,0 +1,47 @@
+<!-- Copyright 2000-2022 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+
+<idea-plugin>
+
+    <version>1.0.0</version>
+    <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
+    <id>my-evnet-bus</id>
+
+    <!-- Text to display as name on Preferences/Settings | Plugin page -->
+    <name>MyEventBus</name>
+
+    <!-- Indicate this plugin can be loaded in all IntelliJ Platform-based products. -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.lang</depends>
+
+    <!-- Text to display as description on Preferences/Settings | Plugin page -->
+    <description>
+        <![CDATA[
+        Adds a <i>Greeting</i> menu group anchored last in the <b>Main Menu</b>
+    ]]>
+    </description>
+    <change-notes>
+        <![CDATA[
+        <ul>
+            <li><b>2.0.0</b> Converted to Gradle project.</li>
+            <li><b>1.0</b> Release 2019.1 and earlier.</li>
+            </ul>
+    ]]>
+    </change-notes>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <codeInsight.lineMarkerProvider id="uhyils.EventBusFindRegisterLineMarkerProvider" language="JAVA" implementationClass="indi.uhyils.gutter.EventBusFindRegisterLineMarkerProvider"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="indi.uhyils.listener.MyProjectManagerListener" topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </applicationListeners>
+
+    <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+    <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
+
+    <actions>
+    </actions>
+
+</idea-plugin>
